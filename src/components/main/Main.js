@@ -1,6 +1,10 @@
 import React from "react";
 import Header from "../header/Header";
 import ContactUs from "../contact-us/ContactUs.js";
+import img1 from "../gallery/assets/image1.jpg";
+import img2 from "../gallery/assets/image2.jpg";
+import img3 from "../gallery/assets/image3.jpg";
+import img4 from "../gallery/assets/image4.jpg";
 import Gallery from "../gallery/Gallery.js";
 import CreditCard from "../credit-card/CreditCard.js";
 
@@ -35,25 +39,25 @@ export default function Main() {
           <div className="col">
             <img
               class="img-thumbnail"
-              src="https://scontent.ftlv6-1.fna.fbcdn.net/v/t1.6435-9/202356951_4032472883538749_1733532661209181007_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=e3f864&_nc_ohc=zQvAa4qQ0Y0AX9fBBj1&_nc_ht=scontent.ftlv6-1.fna&oh=780075f1134a0c72eb8c4c585f28f6b5&oe=60D6802D"
+              src={img1}
               alt="Card image"
               style={{ width: "25%", height: "90%" }}
             />
             <img
               class="img-thumbnail"
-              src="https://scontent.ftlv6-1.fna.fbcdn.net/v/t1.6435-9/164797237_3781988691920504_4931987305617237549_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=730e14&_nc_ohc=gpCFouR6xVUAX-86yp0&_nc_ht=scontent.ftlv6-1.fna&oh=ddca023f1152d89d97724ad31343dfbf&oe=60D5B188"
+              src={img2}
               alt="Card image"
               style={{ width: "25%", height: "90%" }}
             />
             <img
               class="img-thumbnail"
-              src="https://scontent.ftlv6-1.fna.fbcdn.net/v/t1.6435-9/162777694_3767051963414177_2756265185930628962_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=730e14&_nc_ohc=b3NlRW_qU1wAX-u4lxw&_nc_ht=scontent.ftlv6-1.fna&oh=aab54a19fb62bd18dfe261ea39a0ec5f&oe=60D55DDF"
+              src={img3}
               alt="Card image"
               style={{ width: "25%", height: "90%" }}
             />
             <img
               class="img-thumbnail"
-              src="https://scontent.ftlv6-1.fna.fbcdn.net/v/t1.6435-9/79432837_2582727015180017_8496107445121187840_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=730e14&_nc_ohc=9MSKD9CmRkQAX9srMqm&_nc_ht=scontent.ftlv6-1.fna&oh=9ca17e890dcef089314910425e163e4c&oe=60D48E35"
+              src={img4}
               alt="Card image"
               style={{ width: "25%", height: "90%" }}
             />
