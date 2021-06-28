@@ -1,0 +1,13 @@
+.header {
+  font-size: 80px;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    font-size: 45px;
+  }
+  .carusela img {
+    height: 70%;
+    width: 100%;
+  }
+}
