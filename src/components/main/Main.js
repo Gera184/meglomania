@@ -6,9 +6,29 @@ import img2 from "../gallery/assets/image2.jpg";
 import img3 from "../gallery/assets/image3.jpg";
 import img4 from "../gallery/assets/image4.jpg";
 import Gallery from "../gallery/Gallery.js";
+import "./Main.css";
 import CreditCard from "../credit-card/CreditCard.js";
 
 export default function Main() {
+  const dataImage = [
+    {
+      id: 0,
+      img: img1,
+    },
+    {
+      id: 1,
+      img: img2,
+    },
+    {
+      id: 2,
+      img: img3,
+    },
+    {
+      id: 3,
+      img: img4,
+    },
+  ];
+
   return (
     <>
       <Header />
@@ -35,33 +55,12 @@ export default function Main() {
         </div>
       </div>
       <div className="container-fluid text-center align-self-center">
-        <div className="row ">
-          <div className="col">
-            <img
-              class="img-thumbnail"
-              src={img1}
-              alt="Card image"
-              style={{ width: "25%", height: "90%" }}
-            />
-            <img
-              class="img-thumbnail"
-              src={img2}
-              alt="Card image"
-              style={{ width: "25%", height: "90%" }}
-            />
-            <img
-              class="img-thumbnail"
-              src={img3}
-              alt="Card image"
-              style={{ width: "25%", height: "90%" }}
-            />
-            <img
-              class="img-thumbnail"
-              src={img4}
-              alt="Card image"
-              style={{ width: "25%", height: "90%" }}
-            />
-          </div>
+        <div className="row row__inner">
+          {dataImage.map((img, index) => (
+            <div className="col-3 tile">
+              <img class="img-thumbnail tile__img" src={img.img} alt="" />
+            </div>
+          ))}
         </div>
       </div>
       <ContactUs />

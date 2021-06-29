@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import "./CreditCard.css";
+import { ImPointDown } from "react-icons/im";
 
 export default function CreditCard() {
   const [query, setQuery] = useState("");
@@ -19,11 +20,27 @@ export default function CreditCard() {
       });
     setCreditCard("");
   }, [query]);
-  console.log(creditCard);
 
   return (
     <>
-      <div className="container pt-5 pb-5">
+      <div
+        className="container-fluid pt-5 pb-2 text-center"
+        style={{ backgroundColor: "whitesmoke" }}
+      >
+        <div className="row">
+          <div className="col">
+            <h1>Secure your place now. </h1>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <h2>
+              order a ticket today <ImPointDown />
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div className="container pb-5">
         <div className="row">
           <div
             className="col-md-5 card1"

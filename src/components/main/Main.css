@@ -1,0 +1,15 @@
+.tile img {
+  width: 400px;
+  height: 300px;
+}
+@media only screen and (max-width: 600px) {
+  .tile img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .row__inner:hover .tile:hover {
+    transform: scale(3);
+    opacity: 1;
+  }
+}

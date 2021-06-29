@@ -24,7 +24,7 @@ export default function Header() {
             <img
               className="d-block w-100"
               src="https://passportexperience.com/wp-content/uploads/2020/01/310_Day-Zero_Haydon-Perrior_Low-Res.jpg"
-              alt="First slide"
+              alt=""
             />
           </Carousel.Item>
         </Carousel>
