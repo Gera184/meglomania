@@ -57,8 +57,8 @@ export default function Main() {
       <div className="container-fluid text-center align-self-center">
         <div className="row row__inner">
           {dataImage.map((img, index) => (
-            <div className="col-3 tile">
-              <img class="img-thumbnail tile__img" src={img.img} alt="" />
+            <div style={{ padding: "0", margin: "0" }} className="col tile">
+              <img class="tile__img img-thumbnail" src={img.img} alt="" />
             </div>
           ))}
         </div>

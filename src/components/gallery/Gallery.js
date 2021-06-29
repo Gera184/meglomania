@@ -5,6 +5,8 @@ import img7 from "./assets/gallery-img/image7.jpg";
 import img6 from "./assets/gallery-img/image6.jpg";
 import img5 from "./assets/gallery-img/image5.jpg";
 import img12 from "./assets/gallery-img/image12.jpg";
+import img11 from "./assets/gallery-img/image11.jpg";
+import img10 from "./assets/gallery-img/image10.jpg";
 import { FcGallery } from "react-icons/fc";
 import "./Gallery.css";
 
@@ -32,8 +34,16 @@ export default function Gallery() {
     },
 
     {
-      id: 7,
+      id: 5,
       img: img12,
+    },
+    {
+      id: 6,
+      img: img11,
+    },
+    {
+      id: 7,
+      img: img10,
     },
   ];
 
@@ -42,7 +52,7 @@ export default function Gallery() {
       <div class="container text-center pb-2">
         <div className="row row__inner">
           {dataImage.map((img, index) => (
-            <div className="col-4 tile">
+            <div style={{ padding: "0", margin: "0" }} className="col-3 tile">
               <img class="img-thumbnail  tile__img" src={img.img} alt="" />
             </div>
           ))}
