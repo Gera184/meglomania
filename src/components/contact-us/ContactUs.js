@@ -14,7 +14,7 @@ export default function ContactUs() {
   useEffect(() => {
     if (db) {
       const unsubscribe = db
-        .collection("clients")
+        .collection("meglomania")
         .orderBy("createdAt")
         .limit(100)
         .onSnapshot((querySnapshot) => {

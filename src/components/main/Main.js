@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../header/Header";
 import ContactUs from "../contact-us/ContactUs.js";
 import img1 from "../gallery/assets/image1.jpg";
@@ -10,6 +10,9 @@ import "./Main.css";
 import CreditCard from "../credit-card/CreditCard.js";
 
 export default function Main() {
+  const [index, setIndex] = useState("");
+  const [loading, setLoading] = useState(false);
+
   const dataImage = [
     {
       id: 0,
@@ -58,11 +61,54 @@ export default function Main() {
         <div className="row row__inner">
           {dataImage.map((img, index) => (
             <div style={{ padding: "0", margin: "0" }} className="col tile">
-              <img class="tile__img img-thumbnail" src={img.img} alt="" />
+              <img
+                class="tile__img img-thumbnail"
+                data-toggle="modal"
+                data-target="#exampleModal"
+                onClick={() => {
+                  setIndex(index);
+                  setLoading(true);
+                }}
+                src={img.img}
+                alt=""
+              />
             </div>
           ))}
         </div>
       </div>
+      {loading ? (
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img
+                  class="img-thumbnail"
+                  src={dataImage ? dataImage[index].img : ""}
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : null}
+
       <ContactUs />
       <Gallery />
       <CreditCard />
