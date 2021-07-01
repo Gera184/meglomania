@@ -98,11 +98,59 @@ export default function Main() {
                 </button>
               </div>
               <div class="modal-body">
-                <img
-                  class="img-thumbnail"
-                  src={dataImage ? dataImage[index].img : ""}
-                  alt=""
-                />
+                <div
+                  id="carouselExampleControls"
+                  class="carousel slide"
+                  data-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        class="img-thumbnail"
+                        src={dataImage[index].img ? dataImage[index].img : ""}
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <a
+                    class="carousel-control-prev"
+                    href="#carouselExampleControls"
+                    role="button"
+                    data-slide="prev"
+                    onClick={() => {
+                      if (index <= 0) {
+                        setIndex(3);
+                      } else {
+                        setIndex(index - 1);
+                      }
+                    }}
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a
+                    class="carousel-control-next"
+                    href="#carouselExampleControls"
+                    role="button"
+                    data-slide="next"
+                    onClick={() => {
+                      if (index >= 3) {
+                        setIndex(0);
+                      } else {
+                        setIndex(index + 1);
+                      }
+                    }}
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
