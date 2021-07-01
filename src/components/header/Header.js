@@ -19,15 +19,21 @@ export default function Header() {
       </div>
 
       <div className="carusela">
-        <Carousel>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="https://passportexperience.com/wp-content/uploads/2020/01/310_Day-Zero_Haydon-Perrior_Low-Res.jpg"
-              alt=""
-            />
-          </Carousel.Item>
-        </Carousel>
+        <div
+          id="carouselExampleSlidesOnly"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                className="d-block w-100"
+                src="https://passportexperience.com/wp-content/uploads/2020/01/310_Day-Zero_Haydon-Perrior_Low-Res.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
